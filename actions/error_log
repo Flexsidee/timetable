@@ -1,0 +1,66 @@
+[11-Dec-2020 18:55:56 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[11-Dec-2020 18:55:56 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[11-Dec-2020 18:55:56 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[11-Dec-2020 18:55:56 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[11-Dec-2020 18:56:17 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[11-Dec-2020 18:56:17 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[11-Dec-2020 18:56:17 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[11-Dec-2020 18:56:17 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[11-Dec-2020 18:56:47 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[11-Dec-2020 18:56:47 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[11-Dec-2020 18:56:47 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[11-Dec-2020 18:56:47 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 07:17:58 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 07:17:58 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 07:17:58 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 07:17:58 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 07:20:08 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 07:20:08 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 07:20:08 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 07:20:08 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 07:35:00 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 07:35:00 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 07:35:00 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 07:35:00 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:29:43 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:29:43 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:29:43 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:29:43 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:30:13 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:30:13 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:30:13 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:30:13 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:32:49 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:32:49 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:32:49 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:32:49 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:33:08 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:33:08 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:33:08 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:33:08 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:33:22 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:33:22 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:33:22 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:33:22 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:34:28 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:34:28 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:34:28 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:34:28 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:35:46 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:35:46 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:35:46 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:35:46 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:36:13 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:36:13 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:36:13 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:36:13 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:36:52 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:36:52 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:36:52 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:36:52 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[27-Apr-2021 08:37:17 Africa/Lagos] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/duonymit/timetable.duonymity.com/db_conn.php on line 2
+[27-Apr-2021 08:37:17 Africa/Lagos] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/db_conn.php on line 3
+[27-Apr-2021 08:37:17 Africa/Lagos] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 7
+[27-Apr-2021 08:37:17 Africa/Lagos] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/duonymit/timetable.duonymity.com/actions/process_login.php on line 8
+[11-Jun-2021 12:16:22 Africa/Lagos] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/duonymit/timetable.duonymity.com/actions/add_combine_p.php on line 11
+[11-Jun-2021 12:16:47 Africa/Lagos] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/duonymit/timetable.duonymity.com/actions/add_combine_p.php on line 11
