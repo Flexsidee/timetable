@@ -1,4 +1,6 @@
 <?php include'db_conn.php';  
+$venues=mysqli_fetch_array(mysqli_query($db, "select * from lecture_schedule"));
+$timetable=mysqli_fetch_array(mysqli_query($db, "select * from lecture_schedule where day is NULL"));
 session_start();
 if(isset($_SESSION['username'])){
 	$user_id = @$_SESSION['user_id'];
@@ -50,8 +52,16 @@ if(isset($_SESSION['username'])){
     <link rel="stylesheet" type="text/css" href="files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
     
     <link rel="stylesheet" type="text/css" href="files/assets/pages/data-table/extensions/buttons/css/buttons.dataTables.min.css">
-    
-
+    <script>
+        function deleteVenuesAssigned(){
+            const del = confirm('Are you sure you want to delete all the assigned venues');
+            if(del) location.href = 'actions/delete_assigned_venues.php?del=yes';
+        }
+        function deleteTimetable(){
+            const del =confirm('Are you sure you want to delete the timetable');
+            if(del) location.href = 'actions/delete_timetable.php?del=yes';
+        }
+    </script>
 </head>
 
 <body>
@@ -130,6 +140,28 @@ if(isset($_SESSION['username'])){
                                 <i class="feather icon-maximize full-screen"></i>
                                 </a>
                             </li>
+                            <?php 
+                                //button for deleting all assigned venues
+                                if(empty($venues)){
+                                    echo " ";
+                                }else if(empty($timetable)){
+                                    echo " ";
+                                }else{
+                                    echo'<li class="header-notification">
+                                            <button style="border-radius: 15px;" class="btn btn-danger" onclick="deleteVenuesAssigned()">Delete Assigned Venues</button>
+                                        </li>';
+                                }
+                                
+                                //button for deleted the timetable without deleting assigned venues
+                                if(!empty($timetable) || empty($venues)){
+                                    echo " ";
+                                }else{
+                                    echo'<li class="header-notification">
+                                            <button style="border-radius: 15px;" class="btn btn-danger" onclick="deleteTimetable()">Delete Timetable</button>
+                                        </li>';
+                                }
+                             ?>
+                             </li>
                             </li>
                         </ul>
                          <ul class="nav-right">
@@ -144,127 +176,6 @@ if(isset($_SESSION['username'])){
                 </div>
             </nav>
 
-            <!-- <div id="sidebar" class="users p-chat-user showChat">
-                <div class="had-container">
-                    <div class="card card_main p-fixed users-main">
-                        <div class="user-box">
-                            <div class="chat-inner-header">
-                                <div class="back_chatBox">
-                                    <div class="right-icon-control">
-                                        <input type="text" class="form-control  search-text" placeholder="Search Friend"
-                                            id="search-friends">
-                                        <div class="form-icon">
-                                            <i class="icofont icofont-search"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-friend-list">
-                                <div class="media userlist-box" data-id="1" data-status="online"
-                                    data-username="Josephin Doe" data-toggle="tooltip" data-placement="left"
-                                    title="Josephin Doe">
-                                    <a class="media-left" href="#!">
-                                        <img class="media-object img-radius img-radius"
-                                            src="files/assets/images/avatar-3.jpg" alt="Generic placeholder image ">
-                                        <div class="live-status bg-success"></div>
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="f-13 chat-header">Josephin Doe</div>
-                                    </div>
-                                </div>
-                                <div class="media userlist-box" data-id="2" data-status="online"
-                                    data-username="Lary Doe" data-toggle="tooltip" data-placement="left"
-                                    title="Lary Doe">
-                                    <a class="media-left" href="#!">
-                                        <img class="media-object img-radius" src="files/assets/images/avatar-2.jpg"
-                                            alt="Generic placeholder image">
-                                        <div class="live-status bg-success"></div>
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="f-13 chat-header">Lary Doe</div>
-                                    </div>
-                                </div>
-                                <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice"
-                                    data-toggle="tooltip" data-placement="left" title="Alice">
-                                    <a class="media-left" href="#!">
-                                        <img class="media-object img-radius" src="files/assets/images/avatar-4.jpg"
-                                            alt="Generic placeholder image">
-                                        <div class="live-status bg-success"></div>
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="f-13 chat-header">Alice</div>
-                                    </div>
-                                </div>
-                                <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia"
-                                    data-toggle="tooltip" data-placement="left" title="Alia">
-                                    <a class="media-left" href="#!">
-                                        <img class="media-object img-radius" src="files/assets/images/avatar-3.jpg"
-                                            alt="Generic placeholder image">
-                                        <div class="live-status bg-success"></div>
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="f-13 chat-header">Alia</div>
-                                    </div>
-                                </div>
-                                <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen"
-                                    data-toggle="tooltip" data-placement="left" title="Suzen">
-                                    <a class="media-left" href="#!">
-                                        <img class="media-object img-radius" src="files/assets/images/avatar-2.jpg"
-                                            alt="Generic placeholder image">
-                                        <div class="live-status bg-success"></div>
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="f-13 chat-header">Suzen</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="showChat_inner">
-                <div class="media chat-inner-header">
-                    <a class="back_chatBox">
-                        <i class="feather icon-chevron-left"></i> Josephin Doe
-                    </a>
-                </div>
-                <div class="media chat-messages">
-                    <a class="media-left photo-table" href="#!">
-                        <img class="media-object img-radius img-radius m-t-5" src="files/assets/images/avatar-3.jpg"
-                            alt="Generic placeholder image">
-                    </a>
-                    <div class="media-body chat-menu-content">
-                        <div class="">
-                            <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
-                            <p class="chat-time">8:20 a.m.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="media chat-messages">
-                    <div class="media-body chat-menu-reply">
-                        <div class="">
-                            <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
-                            <p class="chat-time">8:20 a.m.</p>
-                        </div>
-                    </div>
-                    <div class="media-right photo-table">
-                        <a href="#!">
-                            <img class="media-object img-radius img-radius m-t-5"
-                                src="files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
-                        </a>
-                    </div>
-                </div>
-                <div class="chat-reply-box p-b-20">
-                    <div class="right-icon-control">
-                        <input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
-                        <div class="form-icon">
-                            <i class="feather icon-navigation"></i>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            
             <!-- Dashboard starts -->
             <div class="pcoded-main-container">
                 <div class="pcoded-wrapper">
@@ -272,116 +183,19 @@ if(isset($_SESSION['username'])){
                         <div class="pcoded-inner-navbar main-menu">
                             <div class="pcoded-navigatio-lavel">Details</div>
                             <ul class="pcoded-item pcoded-left-item">
-                                <li class="pcoded-hasmenu ">
-                                    <a href="javascript:void(0)">
-                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                        <span class="pcoded-mtext">Fill Forms</span>
-                                    </a>
-                                        <ul class="pcoded-submenu">
-                                            <li class="">
-                                                <a href="add_venues.php">
-                                                    <span class="pcoded-mtext">Add Venues</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="add_depts.php">
-                                                    <span class="pcoded-mtext">Add Departments</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="add_lecturer.php">
-                                                    <span class="pcoded-mtext">Add Lecturer</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="add_school_details.php">
-                                                <span class="pcoded-mtext">Add School Detials</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="add_course.php">
-                                                    <span class="pcoded-mtext">Add Course</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="add_class.php">
-                                                    <span class="pcoded-mtext">Add Class</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="add_lecture.php">
-                                                    <span class="pcoded-mtext">Combine Courses</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="add_lecture_details.php">
-                                                <span class="pcoded-mtext">Add Lecture Details</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                <li class="pcoded-hasmenu ">
-                                    <a href="javascript:void(0)">
-                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                        <span class="pcoded-mtext">Edit Forms</span>
-                                    </a>
-                                        <ul class="pcoded-submenu">
-                                            <li class="">
-                                                <a href="edit_venue.php">
-                                                    <span class="pcoded-mtext">Edit Venues</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_levels.php">
-                                                    <span class="pcoded-mtext">Edit Levels</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_breaks.php">
-                                                    <span class="pcoded-mtext">Edit Breaks</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_depts.php">
-                                                    <span class="pcoded-mtext">Edit Departments</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_lecturer.php">
-                                                    <span class="pcoded-mtext">Edit Lecturer</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_school_details.php">
-                                                <span class="pcoded-mtext">Edit School Detials</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_course.php">
-                                                    <span class="pcoded-mtext">Edit Course</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_classes.php">
-                                                    <span class="pcoded-mtext">Edit Class</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_lectures.php">
-                                                    <span class="pcoded-mtext">Edit Combine Courses</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_lecture_details.php">
-                                                <span class="pcoded-mtext">Edit Lecture Details</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                
+                                    <?php 
+                                        if(!empty($venues)){
+                                            echo " ";
+                                        }else{
+                                            include'add_and_edit_links.php';
+                                        }
+                                    ?>
+                                        
                                     <li class="pcoded-hasmenu ">
                                         <a href="javascript:void(0)">
                                             <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                            <span class="pcoded-mtext">Views</span>
+                                            <span class="pcoded-mtext">View Saved Data</span>
                                         </a>
                                         <ul class="pcoded-submenu">
                                             <li class="">
@@ -431,58 +245,12 @@ if(isset($_SESSION['username'])){
                                             </li>
                                         </ul>
                                     </li>
-                                    <!-- <li class="pcoded-hasmenu ">
-                                        <a href="javascript:void(0)">
-                                            <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                                            <span class="pcoded-mtext">Edit</span>
-                                        </a>
-                                        <ul class="pcoded-submenu">
-                                            <li class="">
-                                                <a href="edit_venue.php">
-                                                    <span class="pcoded-mtext">Edit Venues</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_depts.php">
-                                                    <span class="pcoded-mtext">Edit Departments</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_course.php">
-                                                    <span class="pcoded-mtext">Edit Courses</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_lecturers.php">
-                                                    <span class="pcoded-mtext">Edit Lecturers</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_classes.php">
-                                                    <span class="pcoded-mtext">Edit Classes</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_lectures.php">
-                                                    <span class="pcoded-mtext">Edit Combined Courses</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_lecture_details.php">
-                                                    <span class="pcoded-mtext">Edit Lecture Details</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="edit_venues_assigned.php">
-                                                    <span class="pcoded-mtext">Edit Venues Assigned</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li> -->
                                 </ul>
                             <?php 
                                 $sql=mysqli_fetch_array(mysqli_query($db, "select * from lecture_details"));
                                 if(empty($sql)){
+                                    echo " ";
+                                }else if(!empty($venues)){
                                     echo " ";
                                 }else{
                                     echo'<div class="pcoded-navigatio-lavel">Process</div>
@@ -493,76 +261,27 @@ if(isset($_SESSION['username'])){
                                                 <span class="pcoded-mtext">Auto Assign Venues</span>
                                             </a>
                                         </li>';
-                                $venues=mysqli_fetch_array(mysqli_query($db, "select * from lecture_schedule"));    
+                                } 
                                 if(empty($venues)){
                                     echo " ";
+                                }else if(empty($timetable)){
+                                    echo " ";
                                 }else{
-                                    echo'
+                                    echo'<div class="pcoded-navigatio-lavel">Process</div>
+                                    <ul class="pcoded-item pcoded-left-item">
                                         <li class="">
                                             <a href="process_timetable.php">
                                                 <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
                                                 <span class="pcoded-mtext">Harmonze Timetable</span>
                                             </a>
                                         </li>
-                                    </ul>';
-                                    $set_tt=mysqli_fetch_array(mysqli_query($db, "select * from lecture_schedule where day is NULL"));
-                                    if(!empty($set_tt)){
-                                        echo " ";
-                                    }else{
-                                        echo'
-                                        <div class="pcoded-navigatio-lavel">View Timetable</div>
-                                            <ul class="pcoded-item pcoded-left-item">
-                                                <li class="">
-                                                    <a href="view_timetable.php">
-                                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                                        <span class="pcoded-mtext">General Timetable</span>
-                                                    </a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="view_day_timetable.php">
-                                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                                        <span class="pcoded-mtext">By Day of the week</span>
-                                                    </a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="view_level_timetable.php">
-                                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                                        <span class="pcoded-mtext"> By Level</span>
-                                                    </a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="view_full_dept_timetable.php">
-                                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                                        <span class="pcoded-mtext"> By Department Timetable</span>
-                                                    </a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="view_dept_timetable.php">
-                                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                                        <span class="pcoded-mtext">By Class Timetable</span>
-                                                    </a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="view_lecturer_timetable.php">
-                                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                                        <span class="pcoded-mtext">By Lecturer</span>
-                                                    </a>
-                                                </li>
-                                                <li class=""> 
-                                                    <a href="AI_data.php">
-                                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                                        <span class="pcoded-mtext">Data For AI</span>
-                                                    </a>
-                                                </li>
-                                                <li class=""> 
-                                                    <a href="lecturer_payment.php">
-                                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
-                                                        <span class="pcoded-mtext">Data for Lecturers Payment</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>';}
+                                    </ul>
+                                    </div>';
                                 }
+                                if(!empty($timetable) || empty($venues)){
+                                    echo " ";
+                                }else{
+                                    include'view_timetable_links.php';
                                 }
                             ?>
                             

@@ -142,12 +142,11 @@ class timetable{
         //$cnt=count($lect_ven);
         //$set=0;
         $period_id=1;
-        #this is the loop causing it to hang
         $this->obj_data=array();
         foreach($vs as $venue_id=>$v){
             $from=8;
             $day=1;
-            $from_lim=16;
+            $from_lim=18;
             $day_lim=3;
             while(count($v)){   
                 $vcnt=count($v);

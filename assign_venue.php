@@ -172,7 +172,7 @@
     function processVenue(exp){
         sendData('process_venue.php', {cap_expansion:exp}).then(resp => {
             saved_data= resp;
-            console.log(resp);
+            //console.log(resp);
             i('manual_assign').style.display = "none"; //hide the manual assign after automatically loading 
             i('display').style.display="block"; //show the result of the auto assignment
             i('assigned_bod').innerHTML = resp.map((lect, inv) => "<tr'><td>" + (inv + 1) + "</td><td>" +
@@ -186,6 +186,7 @@
         return false;
     }
     async function processSave(){
+            alert('Saving may take a few seconds, you will be notified when saving is completed');
         while(saved_data.length){
             rec=saved_data.shift();
             resp=await sendData('save_all_venues.php', {data:rec});

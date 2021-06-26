@@ -61,6 +61,7 @@ async function process_save(){
     location.replace('view_timetable.php');
 }
 function saveTimetable(){
+    alert('Saving may take a few seconds, you will be notified when saving is completed');
     process_save();
     return false
  }
@@ -80,7 +81,7 @@ function saveTimetable(){
          for(x=0; x<1; x++){
             sendData("main_process.php", {LectureIndex:x}).then(resp=>{
                 //console.log(resp);
-                <?php include'show_days.php'; ?>
+                days=[{day:1,day_name:'Saturday'},{day:2,day_name:'Friday'},{day:3,day_name:'Thursday'}];
                 send=resp['period'];
             days.map(dy=>{
 

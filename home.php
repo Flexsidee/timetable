@@ -10,10 +10,14 @@
                     <div class="row">
 
                         <div class="col-lg-12 col-xl-12">
-                            <p class="alert alert-info">Follow these steps below to be able to use the program to generate timetable for the school</p>
+                            <?php 
+                                if($_GET['tt'] == 'clr') echo'<p style="font-size: 120%" class="alert alert-danger">The timetable has been cleared</p>';
+                                if($_GET['vns'] == 'clr') echo'<p style="font-size: 120%" class="alert alert-danger">The assigned venues has been cleared</p>';
+                            ?>
                             <div class="card">
                             <div class="card-header">
-                                    <h4>Steps To Follow</h4>
+                                <p class="alert alert-primary">Follow these steps below to be able to use the program to generate timetable for the school</p>
+                                <h4>Steps To Follow</h4>
                                 </div>
                                 <div class="card-block">
                                     <p style="font-weight: bold;">Add all necessary details</p>
