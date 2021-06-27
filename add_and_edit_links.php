@@ -58,16 +58,6 @@
                 </a>
             </li>
             <li class="">
-                <a href="edit_levels.php">
-                    <span class="pcoded-mtext">Edit Levels</span>
-                </a>
-            </li>
-            <li class="">
-                <a href="edit_breaks.php">
-                    <span class="pcoded-mtext">Edit Breaks</span>
-                </a>
-            </li>
-            <li class="">
                 <a href="edit_depts.php">
                     <span class="pcoded-mtext">Edit Departments</span>
                 </a>

@@ -11,8 +11,8 @@
 
                         <div class="col-lg-12 col-xl-12">
                             <?php 
-                                if($_GET['tt'] == 'clr') echo'<p style="font-size: 120%" class="alert alert-danger">The timetable has been cleared</p>';
-                                if($_GET['vns'] == 'clr') echo'<p style="font-size: 120%" class="alert alert-danger">The assigned venues has been cleared</p>';
+                                if(isset($_GET['tt']) == 'clr') echo'<p style="font-size: 120%" class="alert alert-danger">The timetable has been cleared</p>';
+                                if(isset($_GET['vns']) == 'clr') echo'<p style="font-size: 120%" class="alert alert-danger">The assigned venues has been cleared</p>';
                             ?>
                             <div class="card">
                             <div class="card-header">

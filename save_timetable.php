@@ -1,4 +1,6 @@
 <?php 
+session_start();
+$semester=$_SESSION['semester'];
     include'db_conn.php'; 
     $out['status']=1;
     $out['LSID']=$_POST['period']['lecture']['LSID'];

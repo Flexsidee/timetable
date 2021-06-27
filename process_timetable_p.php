@@ -1,5 +1,6 @@
 <?php
 session_start();
+$semester=$_SESSION['semester'];
 class lecture_venue{
     var $lecture, $venue;
     function __construct($lecture, $venue)
@@ -78,6 +79,8 @@ class timetable{
     var $cnt_lectures, $cnt_venues, $lecture, $ven_util, $venue, $lectures, $venues, $lecture_venues, $hours_per_day, $days_per_week, $periods, $lecturer_schedules, $obj_data, $cap_expansion;
     function __construct($con="where venue_id is null order by combined_population desc")
     {
+
+$semester=$_SESSION['semester'];
         include'db_conn.php';
         $total_days=mysqli_fetch_assoc(mysqli_query($db, "select total_days from schol_open_details"));
         $days_sql= $total_days['total_days'];
@@ -87,6 +90,8 @@ class timetable{
         $this->hours_per_day=$hours_sql;
         $this->days_per_week=$days_sql;
         $this->cap_expansion=1;
+
+$semester=$_SESSION['semester'];
         include'db_conn.php';
         $fetch_lecture= mysqli_query($db, "SELECT * FROM `vw_lecture_schedule_full` ".$con);
         $this->lectures=array();
@@ -116,6 +121,8 @@ class timetable{
     }
     function assign_period(){
         $breaks=array();
+        
+$semester=$_SESSION['semester'];
         include'db_conn.php';
         $res= mysqli_query($db, "SELECT * FROM `breaks`");
         while($rec=mysqli_fetch_assoc($res)){
@@ -129,6 +136,7 @@ class timetable{
             $vs[$lv["venue_id"]][]=$lv;
         }
 
+$semester=$_SESSION['semester'];
         include'db_conn.php';
         $resp=mysqli_query($db, "select * from vw_department_full where 1 order by class_id");
         $dept=array();

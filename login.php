@@ -1,8 +1,11 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>--Select Semester</title>
+    <title>--Sign In</title>
 
 
 
@@ -71,7 +74,7 @@
             <div class="row">
                 <div class="col-sm-12">
 
-                    <form class="md-float-material form-material" method="post" action="actions/process_select_semester.php">
+                    <form class="md-float-material form-material" method="post" action="actions/process_login.php">
                         <div class="text-center">
                         </div>
                         <div class="auth-box card">
@@ -83,11 +86,14 @@
                                 </div>
                                 <h5 style="color: red; margin-top: -20px; margin-bottom: 10px;"><i><?php if(isset($_GET['err']))echo$_GET['err'];?></i></h5>
                                 <div class="form-group form-primary">
-                                    <select class="form-control" name='select_semester'>
-                                        <option value="0">-- Select --</option>
-                                        <option value='pt_2021_first'>PT 2021, First Semester</option>
-                                        <option value='pt_2021_second'>PT 2021, Seconder Semester</option>
-                                    </select>
+                                    <input type="text" name="username" class="form-control" required=""
+                                        placeholder="Username">
+                                    <span class="form-bar"></span>
+                                </div>
+                                <div class="form-group form-primary">
+                                    <input type="password" name="password" class="form-control" required=""
+                                        placeholder="Password">
+                                    <span class="form-bar"></span>
                                 </div>
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
@@ -95,14 +101,6 @@
                                     </div>
                                 </div>
                                 
-                                <hr />
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <p class="text-inverse text-left m-b-0"><b>Developed By: Somade Daniel O.</b></p>
-                                        <p class="text-inverse text-left m-b-0"><b>Matric NO: 18010211020</b></p>
-                                        <p class="text-inverse text-left m-b-0"><b>Supervisor: Mr I.B.Sadiku</b></p>
-                                        <p class="text-inverse text-left m-b-0"><b>Guide: Engr Awolere Adeleke</b></p>
-                                </div>
                             </div>
                         </div>
                     </form>

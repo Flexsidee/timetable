@@ -1,4 +1,9 @@
-<style>
+<?php 
+session_start();
+if(isset($_SESSION['semester'])){
+    $semester=$_SESSION['semester'];
+include'db_conn.php'; }
+?><style>
     table{
         width: 100%;
     }

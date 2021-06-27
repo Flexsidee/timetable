@@ -1,6 +1,7 @@
 <?php 
 session_start();
 if(isset($_POST)){
+    $semester = $_SESSION['semester'];//used in th db_conn file to select db to work with
     $username= $_POST['username'];
     $pword= $_POST['password'];
     include'../db_conn.php';
@@ -18,7 +19,7 @@ if(isset($_POST)){
             die();
         } 
     }else{
-        header("location: ../index.php?err=Invalid Login Details");
+        header("location: ../index.php?err=User does not exist");
         die();
     } 
 }

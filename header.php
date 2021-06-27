@@ -1,9 +1,11 @@
-<?php include'db_conn.php';  
+<?php 
+session_start();
+if(isset($_SESSION['semester'])){
+    $semester=$_SESSION['semester'];
+    //$user_id = $_SESSION['username'];
+include'db_conn.php';  
 $venues=mysqli_fetch_array(mysqli_query($db, "select * from lecture_schedule"));
 $timetable=mysqli_fetch_array(mysqli_query($db, "select * from lecture_schedule where day is NULL"));
-session_start();
-if(isset($_SESSION['username'])){
-	$user_id = @$_SESSION['user_id'];
 ?>
 
 <!DOCTYPE html>
@@ -140,6 +142,12 @@ if(isset($_SESSION['username'])){
                                 <i class="feather icon-maximize full-screen"></i>
                                 </a>
                             </li>
+                            
+                             <li class="header-notification">
+                                 <a href="home.php" class="text text-primary"><?php echo strtoupper($semester.' semester') ?></a>
+                             </li>
+                        </ul>
+                         <ul class="nav-right">
                             <?php 
                                 //button for deleting all assigned venues
                                 if(empty($venues)){
@@ -161,10 +169,6 @@ if(isset($_SESSION['username'])){
                                         </li>';
                                 }
                              ?>
-                             </li>
-                            </li>
-                        </ul>
-                         <ul class="nav-right">
                              <li class="header-notification">
                                  <a href="home.php" class="text text-primary">Home</a>
                              </li>

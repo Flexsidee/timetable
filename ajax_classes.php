@@ -1,4 +1,6 @@
 <?php 
+session_start();
+$semester=$_SESSION['semester'];
 $out = array();
     include'db_conn.php'; 
     $sql= mysqli_query($db, "select * from vw_lecture_schedule_full where level_id=".$_POST['level_id']." &&  venue_id is NULL ORDER BY `combined_population`  DESC");
