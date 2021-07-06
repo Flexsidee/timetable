@@ -6,3 +6,4 @@ Gateway (ICT) Polytechnic technic is the tertiary institution used to test the w
 
 To use the web app, Xampp is required to serve as local server,
 Put the files in the htdocs, import the database into the php my admin,then you are good to go
+.
